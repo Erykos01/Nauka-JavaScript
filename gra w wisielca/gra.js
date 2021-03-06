@@ -109,6 +109,7 @@ function test(nr)
         document.getElementById(element).style.color="#00c000";
         document.getElementById(element).style.border="3px solid #00c000";
         document.getElementById(element).style.cursor="default";
+        document.getElementById("haslo").style.border="dotted lightgreen 3px"
         wypisz_haslo();
     }
     else
@@ -120,6 +121,8 @@ function test(nr)
         document.getElementById(element).style.border="3px solid #c00000";
         document.getElementById(element).style.cursor="default";
         document.getElementById(element).setAttribute("onclick",";");
+        document.getElementById("haslo").style.border="dotted red 3px"
+        wypisz_haslo();
 
 
         blad++

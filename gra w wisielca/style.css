@@ -17,6 +17,9 @@ body{
     margin-bottom: 50px;
     font-size: 48px;
     min-height: 60px;
+    border: dotted lightgreen;
+    border-radius: 15px;
+
 }
 #alfabet{
     float: left;

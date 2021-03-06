@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Matematyka</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Eryk Janus">
+        <meta name="keywords" content="delta,funkcja kwadratowa,pomoc w nauce">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script>
+            function licz()
+            {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            var fb = b;
+            var fc = c;
+            if(a==""){
+                a=1;
+            }
+            if(b>0){
+                fb="+"+b;
+            }
+            if(c>0){
+                fc="+"+c;
+            }
+
+
+            if (a!='' || b!='' || c!='')
+                {
+                document.getElementById("f").innerHTML="f<sub>(x)</sub> = "+a+"x<sup>2</sup>"+fb+"x"+fc;
+                var d = b*b - 4*a*c;
+                if(d>0)
+                    {
+                    d= Math.round(Math.sqrt(d));
+                    document.getElementById("d").innerHTML="Pierwiastek z Delty wynosi: "+d;
+                    $("#d").fadeIn(500);
+                    var x1= (-1*b+d)/(2*a);
+                    var x2= (-1*b-d)/(2*a);
+                    x1=Math.round(x1*100)/100;
+                    x2=Math.round(x2*100)/100;
+                    document.getElementById("m0").innerHTML="Miejsca zerowe to: "+x1+" oraz "+x2;
+                    if(a>0)
+                    {
+                            if(x1>x2)
+                            {
+                            document.getElementById("przedzial").innerHTML="Funkcja przyjmuje wartosci Dodatnie :(  -&#x221e  , "+x2+"  ) &#8746 "+"(  "+x1+"  +&#x221e  )"+"</br>"
+                            +"Funkcja przyjmuje warotsci Ujemne : (  "+x2+"  ,  "+x1+"  )";
+                            }
+                            if(x2>x1)
+                            {
+                            document.getElementById("przedzial").innerHTML="Funkcja przyjmuje wartosci Dodatnie :(&#x221e , "+x1+") &#8746 "+"("+x2+"+&#x221e)"+"</br>"
+                            +"Funkcja przyjmuje warotsci Ujemne : ("+x1+","+x2  +")";
+                            }
+                    }
+                }
+                else{
+                    document.getElementById("d").innerHTML="Delta wynosi: "+d; 
+                }
+                }   
+            else{
+                document.getElementById("f").innerHTML="za malo informacji";
+                }
+            }
+            $("#m0").fadeIn(500);
+        
+        
+        </script>
+    </head>
+    <body>
+        <div id="Tutul">
+            <h1>Funkcja kwadratowa</h1>
+        </div>
+        <div id="lp">
+            Podaj wspolczynnki uwzgledzniajac operator: 
+            <input id="a" type="text" size="2" >x<sup>2</sup   >
+            <input id="b" type="text" size="2" value="">x 
+            <input id="c" type="text" size="2" value="">
+            <input onclick="licz()" type="submit" value="licz"/>
+            <p id="f"></p>
+            <p id="d"></p>
+            <p id="m0"></p>
+            <p id="przedzial"></p>
+            <p id="jak wyglada wykres"></p>
+
+        </div> 
+
+    </body>
+
+
+</html>

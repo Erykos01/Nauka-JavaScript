@@ -1,0 +1,44 @@
+body{
+    background-color: rgba(82, 231, 95, 0.493);
+    font-family: fantasy;
+}
+.menu{
+    width: 25%;
+    height: 100px;
+    float: left;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 25px;
+}
+#pp{
+    width:33%;
+    height: 700px;
+    float: left;
+    text-align: center;
+}
+#lp{
+    width:33%;
+    height: 700px;
+    float: left;
+    text-align: center;
+}
+#sp{
+    width:34%;
+    height: 700px;
+    float: left;
+    text-align: center;
+}
+a{
+    color: crimson;
+}
+a:hover{
+    color: darkgreen;
+
+}
+#stopka{
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    font-size: 15px;
+    float: left;
+}

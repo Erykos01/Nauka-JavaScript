@@ -1,0 +1,58 @@
+body{
+    background-color: #000000;
+    color: lightgrey;
+    font-size: 24px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+}
+#kontener{
+    width: 900px;
+    margin: auto;
+}
+#haslo{
+    text-align: center;
+    float: left;
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 48px;
+    min-height: 60px;
+}
+#alfabet{
+    float: left;
+    width: 450px;
+    text-align: center;
+    min-height: 280px;
+}
+#szubienica{
+    float: left;
+    width: 450px;
+    text-align: center;
+    min-width: 280px;
+}
+.litera{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border:3px solid gray;
+    border-radius: 15px;
+    float: left;
+    cursor: pointer;
+}
+.litera:hover{
+    background-color:   #222222;
+    color: white;
+    border:3px solid white;
+}
+.reset
+{
+    color: green;
+    cursor: pointer;
+    font-size: 48px;
+}
+.reset:hover
+{
+    color: white;
+}
